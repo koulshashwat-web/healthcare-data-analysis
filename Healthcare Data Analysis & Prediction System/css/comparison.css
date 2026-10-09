@@ -1,0 +1,151 @@
+/* ==========================================================================
+   DATA MINING COMPARISON & BENCHMARKING STYLES
+   ========================================================================== */
+
+/* Runners Bar */
+.benchmark-runners-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.runner-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* Champion Badges Grid */
+.champion-badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.champion-card {
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.champion-primary {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.15) 0%, rgba(20, 184, 166, 0.08) 100%);
+    border: 1px solid rgba(14, 165, 233, 0.4);
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.1);
+}
+
+.champion-screening {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(14, 165, 233, 0.08) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+}
+
+.champion-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.champion-info {
+    flex: 1;
+}
+
+.champion-title {
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+}
+
+.champion-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 2px 0;
+}
+
+.champion-metric {
+    font-size: 0.8rem;
+    color: var(--text-primary);
+}
+
+/* Rank Badges */
+.rank-badge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    display: inline-block;
+}
+
+.rank-1 {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #fff;
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+.rank-2 {
+    background: #94a3b8;
+    color: #0f172a;
+}
+
+.rank-3 {
+    background: #b45309;
+    color: #fff;
+}
+
+.tr-winner td {
+    background: rgba(14, 165, 233, 0.08) !important;
+}
+
+/* Print Styles for Clinical Audit Report Export */
+@media print {
+    body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    .app-sidebar,
+    .app-topbar,
+    .benchmark-runners-bar,
+    .header-actions,
+    .btn {
+        display: none !important;
+    }
+
+    .app-main {
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+
+    .view-container {
+        padding: 0 !important;
+    }
+
+    .card {
+        border: 1px solid #ccc !important;
+        background: #fff !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        margin-bottom: 20px !important;
+    }
+
+    .clinical-data-table th,
+    .clinical-data-table td {
+        color: #000 !important;
+        border-color: #eee !important;
+    }
+
+    .card-title,
+    .metric-strong,
+    .champion-name {
+        color: #000 !important;
+    }
+}
